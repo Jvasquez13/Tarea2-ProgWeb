@@ -2,8 +2,8 @@
 
 *Esta es mi tarea 2 de programación web
 
-*Mi nombre es Bryan Xavier Florentino Montero
-*Mi matrícula es : 2020-10674
+*Mi nombre es Javier Eduardo Aquino Vasquez
+*Mi matrícula es : 2020-10089
 
 # Titulo de la tarea
 
