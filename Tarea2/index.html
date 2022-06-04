@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <script src="assets/js/Display.js " type="text/javascript"></script>
+    <script src="assets/js/Calculadora.js" type="text/javascript"></script>
+    <script src="assets/js/scripts.js" type="text/javascript" defer></script>
+</head>
+
+<body>
+
+    <div class="contenedor ">
+        <div class="calculadora ">
+            <div class="display ">
+                <div id="valor-anterior"></div>
+                <div id="valor-actual"></div>
+            </div>
+            <button class=" col-2 " onclick="display.borrarTodo()">C</button>
+            <button onclick="display.borrar()">&larr;</button>
+            <button class="operador " value="dividir">/</button>
+            <button class="numero ">7</button>
+            <button class="numero ">8</button>
+            <button class="numero ">9</button>
+            <button class="operador" value="multiplicar">X</button>
+            <button class="numero ">4</button>
+            <button class="numero ">5</button>
+            <button class="numero ">6</button>
+            <button class="operador " value="restar">-</button>
+            <button class="numero ">1</button>
+            <button class="numero ">2</button>
+            <button class="numero ">3</button>
+            <button class="operador " value="sumar">+</button>
+            <button class="col-2 numero ">0</button>
+            <button class="numero ">.</button>
+            <button class="operador " value="igual ">=</button>
+        </div>
+
+        <button class="btn-history" onclick="showHistory()">Ver Historial de operaciones</button>
+
+        <div class="history-container" id="history-container">
+
+            <div class="history-modal">
+                <div class="top-section">
+                    <h1>Historial de operaciones</h1>
+                    <button onclick="closeHistory()" class="btn-close">X</button>
+                </div>
+                <div class="modal-content">
+                    <div class="history-list" id="history-list">
+                    </div>
+
+                    <div id="no-operation" class="no-operation">
+                    </div>
+                </div>
+                <button class="btn-delete" onclick="display.deleteHistory()">Delete History</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
