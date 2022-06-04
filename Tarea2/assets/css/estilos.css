@@ -48,11 +48,15 @@ button:focus {
     grid-column: span 2;
 }
 
+.col-1 {
+    grid-column: span 4;
+}
+
 .display {
     grid-column: 1/ -1;
     padding: 16px;
     display: flex;
-    margin: 10px 20px;
+    margin: 20px;
     flex-direction: column;
     align-items: flex-end;
     background-color: #ece5e5;
@@ -60,123 +64,155 @@ button:focus {
     text-align: right;
     justify-content: space-between;
     word-break: break-all;
-    box-shadow: 0px 0px 0px 10px #aa4e4e33;
+    box-shadow: 0px 0px 0px 10px #00000033;
 }
 
-#valor-actual {
-    font-size: 1.5em;
+#input {
+    padding-bottom: 20px;
 }
 
-#valor-anterior {
-    font-size: 2.5em;
+#input input {
+    height: 45px;
+    width: 99%;
+    padding: 0px;
+    border-width: 8px 4px 8px 0px;
+    border-color: transparent;
+    font-size: 28px;
+    text-align: end;
+    border-radius: 4px;
+    color: rgb(10, 10, 10);
+    background-color: #ece5e5;
 }
 
+boton-modal {
+    padding: 40px;
+    background-color: #fff;
+}
 
-/* Estilos del History container */
+.boton-modal label {
+    padding: 10px 15px;
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
 
-.history-container {
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(206, 42, 42, 0.3);
-    position: fixed;
+.boton-modal label:hover {
+    background-color: #185E83;
+}
+
+#btn-modal {
+    display: none;
+}
+
+.container-modal {
+    width: 100%;
     height: 100vh;
-    width: 100vw;
-    pointer-events: none;
+    position: fixed;
     top: 0;
     left: 0;
-}
-
-.history-modal {
-    height: 500px;
-    width: 40%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-}
-
-.modal-content {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 340px;
-    overflow: auto;
-}
-
-.history-list {
-    flex-direction: column;
+    background-color: rgba(144, 148, 150, 0.8);
     display: none;
-}
-
-.no-operation {
-    height: 100%;
     justify-content: center;
     align-items: center;
-    display: none;
+    z-index: 100;
 }
 
-.top-section {
-    display: flex;
-    justify-content: space-between;
-}
-
-.show {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.showSection {
+#btn-modal:checked~.container-modal {
     display: flex;
 }
 
-.btn-close {
-    margin-left: auto;
-    background-color: #DE3C3C;
-    width: 40px;
-    height: 40px;
-    font-weight: 600;
+.content-modal {
+    width: 100%;
+    max-width: 600px;
+    height: 60%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #1c223a;
 }
 
-.btn-delete {
-    background-color: #DC5B5B;
-    width: 70%;
-    margin: auto;
-    padding: 6px 0px;
+.content-modal h2 {
+    margin-bottom: 15px;
 }
 
-.btn-delete:hover {
-    background-color: #DE3C3C;
+.content-modal p {
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdbdb;
+    border-bottom: 1px solid #dbdbdbdb;
 }
 
-h1 {
-    padding: 0;
-    margin: 0;
-    margin-left: 10px;
+.content-modal .btn-cerrar {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.history-modal div p {
-    border-bottom: 1px solid #E5E5E5;
-    margin: 15px 20px;
-    font-size: 18px;
-}
-
-h3 {
-    color: #7E7D7D;
-}
-
-
-/*Botón de acceso al historial*/
-
-.btn-history {
-    margin-top: 30px;
-    font-weight: bold;
-    background-color: transparent;
-    width: 25%;
-    color: #dfbaba;
-    font-size: 24px;
-}
-
-.btn-history:hover {
+.content-modal .btn-cerrar label {
+    padding: 20px 20px;
+    background-color: #a19697;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover {
+    background-color: #185E83;
+}
+
+.content-modal .btn-cerrar button {
+    padding: 7px 10px;
+    background-color: #e9475d;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    border: none;
+    margin-right: 6px;
+}
+
+.content-modal .btn-cerrar button:hover {
+    background-color: #cc3958;
+}
+
+
+/*--------------------Tabla--------------------*/
+
+table {
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table tbody {
+    height: 180px;
+    overflow-y: auto;
+}
+
+table thead,
+table tbody {
+    display: block;
+    width: 600px;
+}
+
+th {
+    padding: 10px 110px 10px 110px;
+}
+
+td {
+    padding: 10px 100px 10px 100px;
+}
+
+thead {
+    background-color: #df2323;
+    color: white;
+}
+
+@media only screen and (max-width: 790px) {
+    #Calculator {
+        width: 36vw;
+    }
 }

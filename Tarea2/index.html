@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Web</title>
     <link rel="stylesheet" href="assets/css/estilos.css">
-    <script src="assets/js/Display.js " type="text/javascript"></script>
-    <script src="assets/js/Calculadora.js" type="text/javascript"></script>
-    <script src="assets/js/scripts.js" type="text/javascript" defer></script>
 </head>
 
 <body>
@@ -16,54 +13,58 @@
     <div class="contenedor ">
         <div class="calculadora ">
             <div class="display ">
-                <div id="valor-anterior"></div>
-                <div id="valor-actual"></div>
+                <div id="input">
+                    <input type="text" id="input-numbers">
+                </div>
             </div>
-            <button class=" col-2 " onclick="display.borrarTodo()">C</button>
-            <button onclick="display.borrar()">&larr;</button>
-            <button class="operador " value="dividir">/</button>
-            <button class="numero ">7</button>
-            <button class="numero ">8</button>
-            <button class="numero ">9</button>
-            <button class="operador" value="multiplicar">X</button>
-            <button class="numero ">4</button>
-            <button class="numero ">5</button>
-            <button class="numero ">6</button>
-            <button class="operador " value="restar">-</button>
-            <button class="numero ">1</button>
-            <button class="numero ">2</button>
-            <button class="numero ">3</button>
-            <button class="operador " value="sumar">+</button>
-            <button class="col-2 numero ">0</button>
-            <button class="numero ">.</button>
-            <button class="operador " value="igual ">=</button>
+            <button type="button" class=" col-2 " onclick="resetiar()">C</button>
+            <button type="button" onclick="resetiar()">&larr;</button>
+            <button type="button" class="operador " onclick="dividir()">/</button>
+            <button type="button" class="numero " onclick="setNumbers(7)">7</button>
+            <button type="button" class="numero " onclick="setNumbers(8)">8</button>
+            <button type="button" class="numero " onclick="setNumbers(9)">9</button>
+            <button type="button" class="operador" onclick="multiplicar()">X</button>
+            <button type="button" class="numero " onclick="setNumbers(4)">4</button>
+            <button type="button" class="numero " onclick="setNumbers(5)">5</button>
+            <button type="button" class="numero " onclick="setNumbers(6)">6</button>
+            <button type="button" class="operador " onclick="restar()">-</button>
+            <button type="button" class="numero " onclick="setNumbers(1)">1</button>
+            <button type="button" class="numero " onclick="setNumbers(2)">2</button>
+            <button type="button" class="numero " onclick="setNumbers(3)">3</button>
+            <button type="button" class="operador " onclick="sumar()">+</button>
+            <button type="button" class="col-2 numero " onclick="setNumbers(0)">0</button>
+            <button type="button" class="numero ">.</button>
+            <button type="button" class="operador " onclick="igual()">=</button>
+
+            <button type="button" class="col-1" onclick="cargarHistorial()">
+                <label for="btn-modal">
+                    Historial
+                </label>
         </div>
+    </div>
+    <input type="checkbox" id="btn-modal">
+        <div class="container-modal ">
+            <div class="content-modal ">
+                <h2>Historial</h2>
+                    <table id="tabla ">
+                    <thead>
+                        <tr>
+                          
+                    </tr>
+                </thead>
+                <tbody id="tablaBody">
 
-        <button class="btn-history" onclick="showHistory()">Ver Historial de operaciones</button>
-
-        <div class="history-container" id="history-container">
-
-            <div class="history-modal">
-                <div class="top-section">
-                    <h1>Historial de operaciones</h1>
-                    <button onclick="closeHistory()" class="btn-close">X</button>
-                </div>
-                <div class="modal-content">
-                    <div class="history-list" id="history-list">
-                    </div>
-
-                    <div id="no-operation" class="no-operation">
-                    </div>
-                </div>
-                <button class="btn-delete" onclick="display.deleteHistory()">Delete History</button>
-            </div>
+                </tbody>
+            </table>
+            <div class="btn-cerrar ">
+                <button onclick="limpiarHistorial() ">Limpiar</button>
+            <label for="btn-modal">Cerrar</label>
         </div>
     </div>
     </div>
 
 
-
-
+    <script src="assets/js/index.js " type="text/javascript "></script>
 </body>
 
 </html>
