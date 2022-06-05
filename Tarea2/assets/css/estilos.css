@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ee6666;
+}
+
+.calc {
+    box-shadow: 6px 6px 13px rgb(90, 82, 80), 6px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 28px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 66px);
+    background-color: #ecf0f3;
+}
+
+input {
+    grid-column: span 4;
+    height: 68px;
+    width: 258px;
+    box-shadow: -6px -6px 13px #fff, 6px 6px rgba(0, 0, 0, 0.16);
+    background-color: #ecf0f3;
+    border: none;
+    border-radius: 32px;
+    color: rgb(26, 25, 25);
+    text-align: end;
+    margin: 40px 0px 30px 0px;
+    padding: 20px;
+    font-size: 40px;
+}
+
+button {
+    box-shadow: inset 6px 6px 13px #fff, 6px 6px rgba(0, 0, 0, 0.16);
+    background-color: #ecf0f3;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.igual {
+    width: 120px;
+    border-radius: 42%;
+    box-shadow: inset 6px 6px 13px #fff, 6px 6px rgba(0, 0, 0, 0.16);
+    background-color: #ecf0f3
+}
+
+.btn-historial {
+    width: 220px;
+    border-radius: 5%;
+    box-shadow: inset 6px 6px 13px #fff, 6px 6px rgba(0, 0, 0, 0.16);
+    background-color: #ecf0f3
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table tbody {
+    /* height: 180px; */
+    overflow-y: auto;
+}
+
+
+table tbody {
+    display: block;
+    width: 400px;
+    height: 450px;
+}
+
+th {
+    padding: 10px 110px 10px 110px;
+}
+
+td {
+    width: 400px;
+    padding: 10px 100px 10px 100px;
+}
+
+/* thead {
+    color: white;
+} */
+
+.container-modal {
+    background-color: #ecf0f3;
+    display: none;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn-cerrar {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 790px) {
+    #Calculator {
+        width: 36vw;
+    }
+}
